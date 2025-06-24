@@ -1,0 +1,14 @@
+{{ template "base.html" .}}
+
+<h1>My blog</h1>
+<a href="/create">Create post</a>
+
+{{ range .posts }}
+<div class="post">
+    <h3>{{ .Title }}</h3>
+    <h3>{{ .Content }}</h3>
+</div>
+{{ else }}
+
+<p>Пока постов нет</p>
+{{ end }}
