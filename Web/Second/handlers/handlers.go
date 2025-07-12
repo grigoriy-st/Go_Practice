@@ -17,6 +17,9 @@ type Post struct {
 }
 
 func SetupRoutes(router *gin.Engine, db *sql.DB) {
+	router.POST("/login", loginHandler)
+	router.GET("/protected", protectedHandler)
+
 	router.GET("/feed", func(c *gin.Context) {
 		posts, err := getPosts(db)
 		fmt.Println(posts)

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The first template file</title>
+</head>
+<body>
+<br>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .title }}</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/">Home</a> | 
+            <a href="/first">First</a> | 
+            <a href="/second">Second</a>
+        </nav>
+    </header>
+    
+    <main>
+        {{ template "content" . }} {{ end }}
+    </main>
+    
+    <footer>
+        <p>© 2024 My Gin App</p>
+    </footer>
+</body>
+</html>
